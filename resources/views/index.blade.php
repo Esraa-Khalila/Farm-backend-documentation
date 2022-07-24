@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
 @include('layouts.Navbar')
+
     <main>
 
         <!-- slider Area Start-->
@@ -149,261 +150,106 @@
         <!-- ================================
     START HOTEL AREA
 ================================= -->
-        <section
-            class="hotel-area section-bg section-padding overflow-hidden padding-right-100px padding-left-100px mt-5 mb-5 customar-padding fix">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-heading text-center">
-                            <h2 class="sec__title line-height-55">Most Popular Farm</h2>
-                        </div><!-- end section-heading -->
-                    </div><!-- end col-lg-12 -->
-                </div><!-- end row -->
-                <div class="row padding-top-50px">
-                    <div class="col-lg-12">
-                        <div class="hotel-card-wrap">
-                            <div class="hotel-card-carousel carousel-action">
-                                <div class="card-item mb-0">
-                                    <div class="card-img">
-                                        <a href="farm-single" class="d-block">
-                                            <img src="images/resize (13).jfif" alt="hotel-img">
-                                        </a>
-                                        <span class="badge">Bestseller</span>
-                                        <div class="add-to-wishlist icon-element" data-toggle="tooltip"
-                                            data-placement="top" title="Bookmark">
-                                            <i class="la la-heart-o"></i>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <h3 class="card-title"><a href="farm-single">Esraa Farm</a></h3>
-                                        <p class="card-meta">Zarqa</p>
-                                        <div class="card-rating">
-                                            <span class="badge text-white">4.4/5</span>
-                                            <span class="review__text">Average</span>
-                                            <span class="rating__text">(30 Reviews)</span>
-                                        </div>
-                                        <div class="card-price d-flex align-items-center justify-content-between">
-                                            <p>
-                                                <span class="price__from">From</span>
-                                                <span class="price__num">70.00Jd</span>
-                                                <span class="price__text">Per night</span>
-                                            </p>
-                                            <a href="farm-single" class="btn-text">See details<i
-                                                    class="la la-angle-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div><!-- end card-item -->
-                                <div class="card-item mb-0">
-                                    <div class="card-img">
-                                        <a href="farm-single" class="d-block">
-                                            <img src="images/istockphoto-539001578-612x612.jpg" alt="hotel-img">
-                                        </a>
-                                        <div class="add-to-wishlist icon-element" data-toggle="tooltip"
-                                            data-placement="top" title="Bookmark">
-                                            <i class="la la-heart-o"></i>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <h3 class="card-title"><a href="farm-single">Esraa Farm</a></h3>
-                                        <p class="card-meta">Zarqa</p>
-                                        <div class="card-rating">
-                                            <span class="badge text-white">4.4/5</span>
-                                            <span class="review__text">Average</span>
-                                            <span class="rating__text">(30 Reviews)</span>
-                                        </div>
-                                        <div class="card-price d-flex align-items-center justify-content-between">
-                                            <p>
-                                                <span class="price__from">From</span>
-                                                <span class="price__num">80.00Jd</span>
-                                                <span class="price__text">Per night</span>
-                                            </p>
-                                            <a href="farm-single" class="btn-text">See details<i
-                                                    class="la la-angle-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div><!-- end card-item -->
-                                <div class="card-item mb-0">
-                                    <div class="card-img">
-                                        <a href="farm-single" class="d-block">
-                                            <img src="images/resize (13).jfif" alt="hotel-img">
-                                        </a>
-                                        <span class="badge">Featured</span>
-                                        <div class="add-to-wishlist icon-element" data-toggle="tooltip"
-                                            data-placement="top" title="Bookmark">
-                                            <i class="la la-heart-o"></i>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <h3 class="card-title"><a href="farm-single">Esraafarm</a></h3>
-                                        <p class="card-meta">Zarqa</p>
-                                        <div class="card-rating" <span class="badge text-white">4/5</span>
-                                            <span class="review__text">Average</span>
-                                            <span class="rating__text">(30 Reviews)</span>
-                                        </div>
-                                        <div class="card-price d-flex align-items-center justify-content-between">
-                                            <p>
-                                                <span class="price__from">From</span>
-                                                <span class="price__num">150.00Jd</span>
-                                                <span class="price__text">Per night</span>
-                                            </p>
-                                            <a href="farm-single" class="btn-text">See details<i
-                                                    class="la la-angle-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div><!-- end card-item -->
-                                <div class="card-item mb-0">
-                                    <div class="card-img">
-                                        <a href="farm-single" class="d-block">
-                                            <img src="images/resize (20).jfif" alt="hotel-img">
-                                        </a>
-                                        <span class="badge">Popular</span>
-                                        <div class="add-to-wishlist icon-element" data-toggle="tooltip"
-                                            data-placement="top" title="Bookmark">
-                                            <i class="la la-heart-o"></i>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <h3 class="card-title"><a href="farm-single">Esraa farm</a></h3>
-                                        <p class="card-meta">Zarqa</p>
-                                        <div class="card-rating">
-                                            <span class="badge text-white">3.5/5</span>
-                                            <span class="review__text">Average</span>
-                                            <span class="rating__text">(52 Reviews)</span>
-                                        </div>
-                                        <div class="card-price d-flex align-items-center justify-content-between">
-                                            <p>
-                                                <span class="price__from">From</span>
-                                                <span class="price__num">160.00Jd</span>
-                                                <span class="price__text">Per night</span>
-                                            </p>
-                                            <a href="farm-single" class="btn-text">See details<i
-                                                    class="la la-angle-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div><!-- end card-item -->
-                                <div class="card-item mb-0">
-                                    <div class="card-img">
-                                        <a href="farm-single" class="d-block">
-                                            <img src="images/resize (13).jfif" alt="hotel-img">
-                                        </a>
-                                        <div class="add-to-wishlist icon-element" data-toggle="tooltip"
-                                            data-placement="top" title="Bookmark">
-                                            <i class="la la-heart-o"></i>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <h3 class="card-title"><a href="farm-single">Esraa farm</a></h3>
-                                        <p class="card-meta"> Zarqa</p>
-                                        <div class="card-rating">
-                                            <span class="badge text-white">4.1/5</span>
-                                            <span class="review__text">Average</span>
-                                            <span class="rating__text">(15 Reviews)</span>
-                                        </div>
-                                        <div class="card-price d-flex align-items-center justify-content-between">
-                                            <p>
-                                                <span class="price__from">From</span>
-                                                <span class="price__num">150.00Jd</span>
-                                                <span class="price__text">Per night</span>
-                                            </p>
-                                            <a href="farm-single" class="btn-text">See details<i
-                                                    class="la la-angle-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div><!-- end card-item -->
-                                <div class="card-item mb-0">
-                                    <div class="card-img">
-                                        <a href="farm-single" class="d-block">
-                                            <img src="images/resize (12).jfif" alt="hotel-img">
-                                        </a>
-                                        <div class="add-to-wishlist icon-element" data-toggle="tooltip"
-                                            data-placement="top" title="Bookmark">
-                                            <i class="la la-heart-o"></i>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <h3 class="card-title"><a href="farm-single">Esraa farm</a></h3>
-                                        <p class="card-meta">38-40 Rue Saint Séverin, Paris, Paris</p>
-                                        <div class="card-rating">
-                                            <span class="badge text-white">4.4/5</span>
-                                            <span class="review__text">Average</span>
-                                            <span class="rating__text">(30 Reviews)</span>
-                                        </div>
-                                        <div class="card-price d-flex align-items-center justify-content-between">
-                                            <p>
-                                                <span class="price__from">From</span>
-                                                <span class="price__num">$88.00</span>
-                                                <span class="price__text">Per night</span>
-                                            </p>
-                                            <a href="farm-single" class="btn-text">See details<i
-                                                    class="la la-angle-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div><!-- end card-item -->
-                                <div class="card-item mb-0">
-                                    <div class="card-img">
-                                        <a href="farm-single" class="d-block">
-                                            <img src="images/resize (11).jfif" alt="hotel-img">
-                                        </a>
-                                        <span class="badge">Bestseller</span>
-                                        <div class="add-to-wishlist icon-element" data-toggle="tooltip"
-                                            data-placement="top" title="Bookmark">
-                                            <i class="la la-heart-o"></i>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <h3 class="card-title"><a href="farm-single">Esraa farm</a></h3>
-                                        <p class="card-meta">Zarqa</p>
-                                        <div class="card-rating">
-                                            <span class="badge text-white">4.2/5</span>
-                                            <span class="review__text">Average</span>
-                                            <span class="rating__text">(10 Reviews)</span>
-                                        </div>
-                                        <div class="card-price d-flex align-items-center justify-content-between">
-                                            <p>
-                                                <span class="price__from">From</span>
-                                                <span class="price__num">80.00Jd</span>
-                                                <span class="price__text">Per night</span>
-                                            </p>
-                                            <a farm-single.php" class="btn-text">See details<i
-                                                    class="la la-angle-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div><!-- end card-item -->
-                                <div class="card-item mb-0">
-                                    <div class="card-img">
-                                        <a href="farm-single" class="d-block">
-                                            <img src="images/resize (10).jfif" alt="hotel-img">
-                                        </a>
-                                        <div class="add-to-wishlist icon-element" data-toggle="tooltip"
-                                            data-placement="top" title="Bookmark">
-                                            <i class="la la-heart-o"></i>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <h3 class="card-title"><a href="farm-single">Esraa farm</a></h3>
-                                        <p class="card-meta">Zarqa</p>
-                                        <div class="card-rating">
-                                            <span class="badge text-white">4.4/5</span>
-                                            <span class="review__text">Average</span>
-                                            <span class="rating__text">(20 Reviews)</span>
-                                        </div>
-                                        <div class="card-price d-flex align-items-center justify-content-between">
-                                            <p>
-                                                <span class="price__from">From</span>
-                                                <span class="price__num">50.00Jd</span>
-                                                <span class="price__text">Per night</span>
-                                            </p>
-                                            <a href="farm-single" class="btn-text">See details<i
-                                                    class="la la-angle-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div><!-- end card-item -->
-                            </div><!-- end hotel-card-carousel -->
+
+      <!-- ================================
+       START BLOG AREA
+================================= -->
+<section class="blog-area padding-top-50px padding-bottom-100px">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading text-center">
+                    <h2 class="sec__title line-height-55">Latest Farms </h2>
+                </div><!-- end section-heading -->
+            </div><!-- end col-lg-12 -->
+        </div><!-- end row -->
+        <div class="row padding-top-50px">
+        @foreach ($farms as $farm)
+            <div class="col-lg-4 responsive-column">     
+   
+                <div class="card-item blog-card">
+                    <div class="card-img">
+                        <img src="images/blog-img.jpg" alt="blog-img">
+                        <div class="post-format icon-element">
+                            <i class="la la-photo"></i>
                         </div>
-                    </div><!-- end col-lg-12 -->
-                </div><!-- end row -->
-            </div><!-- end container-fluid -->
-        </section><!-- end hotel-area -->
+                        <div class="card-body">
+                            <div class="post-categories">
+                                <a href="#" class="badge"></a>
+                                <a href="#" class="badge">{{ $farm->price }}Jd</a>
+                            </div>
+                            <h3 class="card-title line-height-26"><a href="blog-single.html">{{ $farm->name }}</a></h3>
+                            <p class="card-meta">
+                                <span class="post__date">{{ $farm->created_at }}</span>
+                                
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex align-items-center justify-content-between">
+                        <div class="author-content d-flex align-items-center">
+                            <div class="author-img">
+                                <img src="images/small-team1.jpg" alt="testimonial image">
+                            </div>
+                            <div class="author-bio">
+                                <a href="#" class="author__title">{{ $farm->user->name }}</a>
+                            </div>
+                        </div>
+                        <div class="post-share">
+                            <ul>
+                                <li>
+                                    <i class="la la-share icon-element"></i>
+                                    <ul class="post-share-dropdown d-flex align-items-center">
+                                        <li><a href="#"><i class="lab la-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="lab la-twitter"></i></a></li>
+                                        <li><a href="#"><i class="lab la-instagram"></i></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- end card-item -->
+            </div><!-- end col-lg-4 -->
+          @endforeach 
+                       
+        </div><!-- end row -->
+        <div class="row">
+           <div class="col-lg-12">  
+                <div class="btn-box text-center pt-4">
+                    <a href="blog-grid.html" class="theme-btn">Read More Post</a>
+                </div>
+            </div>  
+        </div>
+    </div><!-- end container -->
+</section><!-- end blog-area -->
+<!-- ================================
+                     
+         
+
+   
+  
+
+          
+
+
+<!-- ================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <!-- Dining Start -->
         <div class="dining-area ">
@@ -820,30 +666,7 @@
         </div>
         <!-- Blog End -->
 
-        <!-- Gallery img Start-->
-        <div class="gallery-area fix">
-            <div class="container-fluid p-0">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="gallery-active owl-carousel">
-                            <div class="gallery-img">
-                                <a href="#"><img src="assets/img/gallery/resize (6).jfif" height="370px"
-                                        width="100px"alt=""></a>
-                            </div>
-                            <div class="gallery-img">
-                                <a href="#"><img src="assets/img/gallery/resize (8).jfif" height="370px"
-                                        width="100px" alt=""></a>
-                            </div>
-                            <div class="gallery-img">
-                                <a href="#"><img src="assets/img/gallery/resize (7).jfif" height="370px"
-                                        width="100px" alt=""></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Gallery img End-->
+      
     </main>
     <footer>
         <!-- Footer Start-->
@@ -937,59 +760,62 @@
         <!-- Footer End-->
     </footer>
 
+
+
+
     <!-- JS here -->
     <!-- Template JS Files -->
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-select.min.js"></script>
-    <script src="js/moment.min.js"></script>
-    <script src="js/daterangepicker.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.fancybox.min.js"></script>
-    <script src="js/jquery.countTo.min.js"></script>
-    <script src="js/animated-headline.js"></script>
-    <script src="js/jquery.ripples-min.js"></script>
-    <script src="js/quantity-input.js"></script>
-    <script src="js/main.js"></script>
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min../assets/js"></script>
+    <script src="assets/js/bootstrap-select.min.js"></script>
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/daterangepicker.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.fancybox.min.js"></script>
+    <script src="assets/js/jquery.countTo.min.js"></script>
+    <script src="assets/js/animated-headline.js"></script>
+    <script src="assets/js/jquery.ripples-min.js"></script>
+    <script src="assets/js/quantity-input.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 <!-- All JS Custom Plugins Link Here here -->
-<script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
 
 <!-- Jquery, Popper, Bootstrap -->
-<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-<script src="./assets/js/popper.min.js"></script>
-<script src="./assets/js/bootstrap.min.js"></script>
+<script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
 <!-- Jquery Mobile Menu -->
-<script src="./assets/js/jquery.slicknav.min.js"></script>
+<script src="assets/js/jquery.slicknav.min.js"></script>
 
 <!-- Jquery Slick , Owl-Carousel Plugins -->
-<script src="./assets/js/owl.carousel.min.js"></script>
-<script src="./assets/js/slick.min.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
 <!-- Date Picker -->
-<script src="./assets/js/gijgo.min.js"></script>
+<script src="assets/js/gijgo.min.js"></script>
 <!-- One Page, Animated-HeadLin -->
-<script src="./assets/js/wow.min.js"></script>
-<script src="./assets/js/animated.headline.js"></script>
-<script src="./assets/js/jquery.magnific-popup.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/animated.headline.js"></script>
+<script src="assets/js/jquery.magnific-popup.js"></script>
 
 <!-- Scrollup, nice-select, sticky -->
-<script src="./assets/js/jquery.scrollUp.min.js"></script>
-<script src="./assets/js/jquery.nice-select.min.js"></script>
-<script src="./assets/js/jquery.sticky.js"></script>
+<script src="assets/js/jquery.scrollUp.min.js"></script>
+<script src="assets/js/jquery.nice-select.min.js"></script>
+<script src="assets/js/jquery.sticky.js"></script>
 
 <!-- contact js -->
-<script src="./assets/js/contact.js"></script>
-<script src="./assets/js/jquery.form.js"></script>
-<script src="./assets/js/jquery.validate.min.js"></script>
-<script src="./assets/js/mail-script.js"></script>
-<script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="assets/js/contact.js"></script>
+<script src="assets/js/jquery.form.js"></script>
+<script src="assets/js/jquery.validate.min.js"></script>
+<script src="assets/js/mail-script.js"></script>
+<script src="assets/js/jquery.ajaxchimp.min.js"></script>
 
 <!-- Jquery Plugins, main Jquery -->
-<script src="./assets/js/plugins.js"></script>
-<script src="./assets/js/main.js"></script>
-
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 </body>
 

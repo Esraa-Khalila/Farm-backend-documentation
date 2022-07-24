@@ -5079,7 +5079,7 @@ body {
   z-index: 1;
 }
 .blog-card .card-img::before {
-  background-color: rgb(73, 160, 51);
+  background-color: rgb(70, 73, 69);
   position: absolute;
   content: "";
   top: 0;

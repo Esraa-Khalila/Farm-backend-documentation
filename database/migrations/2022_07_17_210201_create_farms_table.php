@@ -14,7 +14,7 @@ class CreateFarmsTable extends Migration
     public function up()
     {
         Schema::create('farms', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->string('name')->nullable();
             $table->string('location')->nullable();
             $table->decimal('price')->nullable();
@@ -25,7 +25,7 @@ class CreateFarmsTable extends Migration
             $table->time('time')->nullable();
             $table->string('day')->nullable();
             $table->integer('roomNumber')->nullable();
-            $table->integer('user_id')->unsigned();
+            $table->bigInteger('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')
             ->onDelete('CASCADE')
             ->onUpdate('CASCADE');

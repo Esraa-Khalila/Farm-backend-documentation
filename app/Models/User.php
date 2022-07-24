@@ -32,7 +32,9 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
-
+   public function farm(){
+        return $this->hasmany(Farm::class);
+    }
     /**
      * The attributes that should be cast.
      *

@@ -7,7 +7,7 @@
     <meta name="author" content="TechyDevs">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Trizen - Travel Booking HTML Template</title>
+    <title>  Farm</title>
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.png">
 
@@ -297,7 +297,7 @@
                 <li><a href="admin-dashboard-visa.html"><i class="la la-plane mr-2 text-color-5"></i>Visa Application</a></li>
                 <li><a href="admin-dashboard-reviews.html"><i class="la la-star mr-2 text-color-6"></i>Reviews</a></li>
                 <li><a href="admin-dashboard-wishlist.html"><i class="la la-heart mr-2 text-color-7"></i>Wishlist</a></li>
-                <li class="page-active"><a href="admin-dashboard-travel-agents.html"><i class="la la-text-width mr-2"></i>Travel Agents</a></li>
+                <li class="page-active"><a href="farmsAdmin"><i class="la la-text-width mr-2"></i>Farms</a></li>
                 <li>
                     <span class="side-menu-icon toggle-menu-icon">
                         <i class="la la-angle-down"></i>
@@ -574,7 +574,7 @@
                     <div class="col-lg-12">
                         <div class="form-box">
                             <div class="form-title-wrap">
-                                <h3 class="title">Travel Agent Lists</h3>
+                                <h3 class="title">Farm Lists</h3>
                                 <p class="font-size-14">Showing 1 to 8 of 20 entries</p>
                             </div>
                             <div class="form-content">
@@ -583,168 +583,53 @@
                                         <thead>
                                         <tr>
                                             <th scope="col">No</th>
-                                            <th scope="col">Agency Name</th>
-                                            <th scope="col">Website</th>
-                                            <th scope="col">Email</th>
-                                            <th scope="col">Country</th>
-                                            <th scope="col">City</th>
+                                            <th scope="col">farm Name</th>
+                                            <th scope="col">image</th>
+                                            <th scope="col">user</th>
+                                            <th scope="col">price</th>
+                                            <th scope="col">day</th>
                                             <th scope="col">Status</th>
                                             <th scope="col">Action</th>
                                         </tr>
                                         </thead>
+                                          @foreach ($data as $farm)
                                         <tbody>
                                         <tr>
                                             <th scope="row">1</th>
                                             <td>
                                                 <div class="table-content">
-                                                    <h3 class="title">Ocean Travel Agency</h3>
+                                                    <h3 class="title">{{ $farm->name }}</h3>
                                                 </div>
                                             </td>
-                                            <td><a href="#" class="color-text">www.oceantravelagency.com</a></td>
-                                            <td>oceantravelagency@gmail.com</td>
-                                            <td>Italy</td>
-                                            <td>Rome</td>
+                                            <td><img src="{{ asset('/uploads/Farm/' . $farm->images) }}"></td>
+                                            <td>{{ $farm->user_id }}</td>
+                                            <td>{{ $farm->price }}</td>
+                                            <td>{{ $farm->day }}</td>
+                                            @if( $farm->active =='active')
                                             <td><span class="badge badge-success py-1 px-2">Active</span></td>
-                                            <td>
-                                                <div class="table-content">
-                                                    <a href="#" class="theme-btn theme-btn-small mr-2" data-toggle="tooltip" data-placement="top" title="View"><i class="la la-eye"></i></a>
-                                                    <a href="#" class="theme-btn theme-btn-small" data-toggle="tooltip" data-placement="top" title="Edit"><i class="la la-edit"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>
-                                                <div class="table-content">
-                                                    <h3 class="title">Taimor Travel Agency</h3>
-                                                </div>
-                                            </td>
-                                            <td><a href="#" class="color-text">www.oceantravelagency.com</a></td>
-                                            <td>oceantravelagency@gmail.com</td>
-                                            <td>Italy</td>
-                                            <td>Rome</td>
+                                            @else
                                             <td><span class="badge badge-danger py-1 px-2">Inactive</span></td>
+                                            @endif
                                             <td>
                                                 <div class="table-content">
                                                     <a href="#" class="theme-btn theme-btn-small mr-2" data-toggle="tooltip" data-placement="top" title="View"><i class="la la-eye"></i></a>
-                                                    <a href="#" class="theme-btn theme-btn-small" data-toggle="tooltip" data-placement="top" title="Edit"><i class="la la-edit"></i></a>
+                                                    <a href="{{ route('farmsAdmin.edit', $farm->id) }}" class="theme-btn theme-btn-small" data-toggle="tooltip" data-placement="top" title="Edit"><i class="la la-edit"></i></a>
+                                                      <form method="POST" action="{{ route('farmsAdmin.destroy', $farm->id) }}"
+                                                    class="d-inline">
+                                                      @csrf
+                                                     @method('DELETE')
+                                                    <button type="submit" class="theme-btn theme-btn-small" data-toggle="tooltip" data-placement="top"
+                                                         title='Delete'>Delete</button>
+                                                </form>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">3</th>
-                                            <td>
-                                                <div class="table-content">
-                                                    <h3 class="title">Ocean Travel Agency</h3>
-                                                </div>
-                                            </td>
-                                            <td><a href="#" class="color-text">www.oceantravelagency.com</a></td>
-                                            <td>oceantravelagency@gmail.com</td>
-                                            <td>Italy</td>
-                                            <td>Rome</td>
-                                            <td><span class="badge badge-success py-1 px-2">Active</span></td>
-                                            <td>
-                                                <div class="table-content">
-                                                    <a href="#" class="theme-btn theme-btn-small mr-2" data-toggle="tooltip" data-placement="top" title="View"><i class="la la-eye"></i></a>
-                                                    <a href="#" class="theme-btn theme-btn-small" data-toggle="tooltip" data-placement="top" title="Edit"><i class="la la-edit"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">4</th>
-                                            <td>
-                                                <div class="table-content">
-                                                    <h3 class="title">Al Monsur Travel Agency</h3>
-                                                </div>
-                                            </td>
-                                            <td><a href="#" class="color-text">www.oceantravelagency.com</a></td>
-                                            <td>oceantravelagency@gmail.com</td>
-                                            <td>Italy</td>
-                                            <td>Rome</td>
-                                            <td><span class="badge badge-success py-1 px-2">Active</span></td>
-                                            <td>
-                                                <div class="table-content">
-                                                    <a href="#" class="theme-btn theme-btn-small mr-2" data-toggle="tooltip" data-placement="top" title="View"><i class="la la-eye"></i></a>
-                                                    <a href="#" class="theme-btn theme-btn-small" data-toggle="tooltip" data-placement="top" title="Edit"><i class="la la-edit"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">5</th>
-                                            <td>
-                                                <div class="table-content">
-                                                    <h3 class="title">Digital Travel Agency</h3>
-                                                </div>
-                                            </td>
-                                            <td><a href="#" class="color-text">www.oceantravelagency.com</a></td>
-                                            <td>oceantravelagency@gmail.com</td>
-                                            <td>Italy</td>
-                                            <td>Rome</td>
-                                            <td><span class="badge badge-success py-1 px-2">Active</span></td>
-                                            <td>
-                                                <div class="table-content">
-                                                    <a href="#" class="theme-btn theme-btn-small mr-2" data-toggle="tooltip" data-placement="top" title="View"><i class="la la-eye"></i></a>
-                                                    <a href="#" class="theme-btn theme-btn-small" data-toggle="tooltip" data-placement="top" title="Edit"><i class="la la-edit"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">6</th>
-                                            <td>
-                                                <div class="table-content">
-                                                    <h3 class="title">Kamran Travel Agency</h3>
-                                                </div>
-                                            </td>
-                                            <td><a href="#" class="color-text">www.oceantravelagency.com</a></td>
-                                            <td>oceantravelagency@gmail.com</td>
-                                            <td>Italy</td>
-                                            <td>Rome</td>
-                                            <td><span class="badge badge-success py-1 px-2">Active</span></td>
-                                            <td>
-                                                <div class="table-content">
-                                                    <a href="#" class="theme-btn theme-btn-small mr-2" data-toggle="tooltip" data-placement="top" title="View"><i class="la la-eye"></i></a>
-                                                    <a href="#" class="theme-btn theme-btn-small" data-toggle="tooltip" data-placement="top" title="Edit"><i class="la la-edit"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">7</th>
-                                            <td>
-                                                <div class="table-content">
-                                                    <h3 class="title">Tielab Travel Agency</h3>
-                                                </div>
-                                            </td>
-                                            <td><a href="#" class="color-text">www.oceantravelagency.com</a></td>
-                                            <td>oceantravelagency@gmail.com</td>
-                                            <td>Italy</td>
-                                            <td>Rome</td>
-                                            <td><span class="badge badge-success py-1 px-2">Active</span></td>
-                                            <td>
-                                                <div class="table-content">
-                                                    <a href="#" class="theme-btn theme-btn-small mr-2" data-toggle="tooltip" data-placement="top" title="View"><i class="la la-eye"></i></a>
-                                                    <a href="#" class="theme-btn theme-btn-small" data-toggle="tooltip" data-placement="top" title="Edit"><i class="la la-edit"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">8</th>
-                                            <td>
-                                                <div class="table-content">
-                                                    <h3 class="title">Lequid Travel Agency</h3>
-                                                </div>
-                                            </td>
-                                            <td><a href="#" class="color-text">www.oceantravelagency.com</a></td>
-                                            <td>oceantravelagency@gmail.com</td>
-                                            <td>Italy</td>
-                                            <td>Rome</td>
-                                            <td><span class="badge badge-success py-1 px-2">Active</span></td>
-                                            <td>
-                                                <div class="table-content">
-                                                    <a href="#" class="theme-btn theme-btn-small mr-2" data-toggle="tooltip" data-placement="top" title="View"><i class="la la-eye"></i></a>
-                                                    <a href="#" class="theme-btn theme-btn-small" data-toggle="tooltip" data-placement="top" title="Edit"><i class="la la-edit"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                            
+                                  
+                                           
+                                                @endforeach 
+                                           
                                         </tbody>
                                     </table>
                                 </div>
@@ -828,5 +713,4 @@
 <script src="js/main.js"></script>
 </body>
 
-<!-- Mirrored from techydevs.com/demos/themes/html/trizen-demo/trizen/admin-dashboard-travel-agents.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 26 Jun 2022 09:48:28 GMT -->
 </html>

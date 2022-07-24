@@ -7,7 +7,7 @@
     <meta name="author" content="TechyDevs">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Trizen - Travel Booking HTML Template</title>
+    <title>Trizen - Farm</title>
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.png">
 
@@ -267,7 +267,7 @@
                     <img src="images/team9.jpg" alt="testimonial image">
                 </div>
                 <div class="author-bio">
-                    <h4 class="author__title">Royel travel agency</h4>
+                    <h4 class="author__title"> </h4>
                     <span class="author__meta">Welcome to Admin Panel</span>
                 </div>
             </div>
@@ -297,7 +297,7 @@
                 <li><a href="admin-dashboard-visa.html"><i class="la la-plane mr-2 text-color-4"></i>Visa Application</a></li>
                 <li><a href="admin-dashboard-reviews.html"><i class="la la-star mr-2 text-color-5"></i>Reviews</a></li>
                 <li><a href="admin-dashboard-wishlist.html"><i class="la la-heart mr-2 text-color-6"></i>Wishlist</a></li>
-                <li><a href="admin-dashboard-travel-agents.html"><i class="la la-text-width mr-2 text-color-7"></i>Travel Agents</a></li>
+                <li><a href="farmsAdmin"><i class="la la-text-width mr-2 text-color-7"></i>Farms</a></li>
                 <li>
                     <span class="side-menu-icon toggle-menu-icon">
                         <i class="la la-angle-down"></i>

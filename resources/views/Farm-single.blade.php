@@ -111,6 +111,7 @@
                             <div class="section-block"></div>
                             <div class="single-content-item py-4">
                                 <div class="row">
+                          
                                     <div class="col-lg-4 responsive-column">
                                         <div class="single-tour-feature d-flex align-items-center mb-3">
                                             <div class="single-feature-icon icon-element ml-0 flex-shrink-0 mr-3">

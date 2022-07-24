@@ -13,16 +13,16 @@
                 <div class="col-lg-6">
                     <div class="breadcrumb-content">
                         <div class="section-heading">
-                            <h2 class="sec__title text-white">Hotel List</h2>
+                            <h2 class="sec__title text-white">Farm List</h2>
                         </div>
                     </div><!-- end breadcrumb-content -->
                 </div><!-- end col-lg-6 -->
                 <div class="col-lg-6">
                     <div class="breadcrumb-list text-right">
                         <ul class="list-items">
-                            <li><a href="index.html">Home</a></li>
-                            <li>Hotel</li>
-                            <li>Hotel List</li>
+                            <li><a href="/">Home</a></li>
+                            <li>farm</li>
+                            <li>Farm List</li>
                         </ul>
                     </div><!-- end breadcrumb-list -->
                 </div><!-- end col-lg-6 -->
@@ -48,7 +48,7 @@
                     <div class="filter-top d-flex align-items-center justify-content-between pb-4">
                         <div>
                             <h3 class="title font-size-24">2224 Hotels found</h3>
-                            <p class="font-size-14"><span class="mr-1 pt-1">Book with confidence:</span>No hotel booking fees</p>
+                            <p class="font-size-14"><span class="mr-1 pt-1">Book with confidence:</span>No farm booking fees</p>
                         </div>
                         <div class="layout-view d-flex align-items-center">
                             <a href="hotel-grid.html" data-toggle="tooltip" data-placement="top" title="Grid View"><i class="la la-th-large"></i></a>
@@ -252,22 +252,8 @@
                                     <div class="roomInc"><i class="la la-plus"></i></div>
                                 </div>
                             </div><!-- end qty-box -->
-                            <div class="qty-box mb-2 d-flex align-items-center justify-content-between">
-                                <label class="font-size-16">Adults <span>18+</span></label>
-                                <div class="qtyBtn d-flex align-items-center">
-                                    <div class="qtyDec"><i class="la la-minus"></i></div>
-                                    <input type="text" name="qtyInput" value="0">
-                                    <div class="qtyInc"><i class="la la-plus"></i></div>
-                                </div>
-                            </div><!-- end qty-box -->
-                            <div class="qty-box mb-2 d-flex align-items-center justify-content-between">
-                                <label class="font-size-16">Children <span>2-12 years old</span></label>
-                                <div class="qtyBtn d-flex align-items-center">
-                                    <div class="qtyDec"><i class="la la-minus"></i></div>
-                                    <input type="text" name="qtyInput" value="0">
-                                    <div class="qtyInc"><i class="la la-plus"></i></div>
-                                </div>
-                            </div><!-- end qty-box -->
+                      
+                      
                         </div><!-- end sidebar-widget-item -->
                         <div class="btn-box pt-2">
                             <a href="hotel-search-result.html" class="theme-btn">Search Now</a>
@@ -515,20 +501,22 @@
                     </div><!-- end sidebar-widget -->
                 </div><!-- end sidebar -->
             </div><!-- end col-lg-4 -->
-            <div class="col-lg-8">
+            <div class="col-lg-8">@foreach ($farms as $farm)
                 <div class="card-item card-item-list">
                     <div class="card-img">
-                        <a href="hotel-single.html" class="d-block">
-                            <img src="images/img1.jpg" alt="hotel-img">
+                        <a href="{{ route('single', $farm->id) }}" class="d-block">
+                                <img src="{{ asset('/uploads/Farm/' . $farm->images) }}"
                         </a>
                         <span class="badge">Bestseller</span>
                         <div class="add-to-wishlist icon-element" data-toggle="tooltip" data-placement="top" title="Bookmark">
                             <i class="la la-heart-o"></i>
                         </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title"><a href="hotel-single.html">The Millennium Hilton New York</a></h3>
-                        <p class="card-meta">124 E Huron St, New york</p>
+                    </div>  
+ 
+                
+                    <div class="card-body">     
+                        <h3 class="card-title"><a href="{{ route('single', $farm->id) }}">{{ $farm->name }}</a></h3>
+                        <p class="card-meta">{{ $farm->location }}</p>
                         <div class="card-rating">
                             <span class="badge text-white">4.4/5</span>
                             <span class="review__text">Average</span>
@@ -537,177 +525,16 @@
                         <div class="card-price d-flex align-items-center justify-content-between">
                             <p>
                                 <span class="price__from">From</span>
-                                <span class="price__num">$88.00</span>
+                                <span class="price__num">{{ $farm->price }}</span>
                                 <span class="price__text">Per night</span>
                             </p>
-                            <a href="hotel-single.html" class="btn-text">See details<i class="la la-angle-right"></i></a>
+                            <a  href="{{ route('single', $farm->id) }}" class="btn-text">See details<i class="la la-angle-right"></i></a>
                         </div>
                     </div>
-                </div><!-- end card-item -->
-                <div class="card-item card-item-list">
-                    <div class="card-img">
-                        <a href="hotel-single.html" class="d-block">
-                            <img src="images/img2.jpg" alt="hotel-img">
-                        </a>
-                        <div class="add-to-wishlist icon-element" data-toggle="tooltip" data-placement="top" title="Bookmark">
-                            <i class="la la-heart-o"></i>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title"><a href="hotel-single.html">Best Western Grant Park Hotel</a></h3>
-                        <p class="card-meta">124 E Huron St, Chicago</p>
-                        <div class="card-rating">
-                            <span class="badge text-white">4.4/5</span>
-                            <span class="review__text">Average</span>
-                            <span class="rating__text">(30 Reviews)</span>
-                        </div>
-                        <div class="card-price d-flex align-items-center justify-content-between">
-                            <p>
-                                <span class="price__from">From</span>
-                                <span class="price__num">$58.00</span>
-                                <span class="price__text">Per night</span>
-                            </p>
-                            <a href="hotel-single.html" class="btn-text">See details<i class="la la-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div><!-- end card-item -->
-                <div class="card-item card-item-list">
-                    <div class="card-img">
-                        <a href="hotel-single.html" class="d-block">
-                            <img src="images/img3.jpg" alt="hotel-img">
-                        </a>
-                        <span class="badge">Featured</span>
-                        <div class="add-to-wishlist icon-element" data-toggle="tooltip" data-placement="top" title="Bookmark">
-                            <i class="la la-heart-o"></i>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title"><a href="hotel-single.html">Hyatt Regency Maui Resort & Spa</a></h3>
-                        <p class="card-meta">200 Nohea Kai Dr, Lahaina, HI</p>
-                        <div class="card-rating">
-                            <span class="badge text-white">4.4/5</span>
-                            <span class="review__text">Average</span>
-                            <span class="rating__text">(30 Reviews)</span>
-                        </div>
-                        <div class="card-price d-flex align-items-center justify-content-between">
-                            <p>
-                                <span class="price__from">From</span>
-                                <span class="price__num">$88.00</span>
-                                <span class="price__text">Per night</span>
-                            </p>
-                            <a href="hotel-single.html" class="btn-text">See details<i class="la la-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div><!-- end card-item -->
-                <div class="card-item card-item-list">
-                    <div class="card-img">
-                        <a href="hotel-single.html" class="d-block">
-                            <img src="images/img4.jpg" alt="hotel-img">
-                        </a>
-                        <span class="badge">Popular</span>
-                        <div class="add-to-wishlist icon-element" data-toggle="tooltip" data-placement="top" title="Bookmark">
-                            <i class="la la-heart-o"></i>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title"><a href="hotel-single.html">Four Seasons Resort Maui at Wailea</a></h3>
-                        <p class="card-meta">3900 Wailea Alanui Drive, Kihei, HI</p>
-                        <div class="card-rating">
-                            <span class="badge text-white">4.4/5</span>
-                            <span class="review__text">Average</span>
-                            <span class="rating__text">(30 Reviews)</span>
-                        </div>
-                        <div class="card-price d-flex align-items-center justify-content-between">
-                            <p>
-                                <span class="price__from">From</span>
-                                <span class="price__num">$88.00</span>
-                                <span class="price__text">Per night</span>
-                            </p>
-                            <a href="hotel-single.html" class="btn-text">See details<i class="la la-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div><!-- end card-item -->
-                <div class="card-item card-item-list">
-                    <div class="card-img">
-                        <a href="hotel-single.html" class="d-block">
-                            <img src="images/img5.jpg" alt="hotel-img">
-                        </a>
-                        <div class="add-to-wishlist icon-element" data-toggle="tooltip" data-placement="top" title="Bookmark">
-                            <i class="la la-heart-o"></i>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title"><a href="hotel-single.html">Ibis Styles London Heathrow</a></h3>
-                        <p class="card-meta"> 272 Bath Road, Harlington, England</p>
-                        <div class="card-rating">
-                            <span class="badge text-white">4.4/5</span>
-                            <span class="review__text">Average</span>
-                            <span class="rating__text">(30 Reviews)</span>
-                        </div>
-                        <div class="card-price d-flex align-items-center justify-content-between">
-                            <p>
-                                <span class="price__from">From</span>
-                                <span class="price__num">$88.00</span>
-                                <span class="price__text">Per night</span>
-                            </p>
-                            <a href="hotel-single.html" class="btn-text">See details<i class="la la-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div><!-- end card-item -->
-                <div class="card-item card-item-list">
-                    <div class="card-img">
-                        <a href="hotel-single.html" class="d-block">
-                            <img src="images/img6.jpg" alt="hotel-img">
-                        </a>
-                        <div class="add-to-wishlist icon-element" data-toggle="tooltip" data-placement="top" title="Bookmark">
-                            <i class="la la-heart-o"></i>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title"><a href="hotel-single.html">Hotel Europe Saint Severin Paris</a></h3>
-                        <p class="card-meta">38-40 Rue Saint Séverin, Paris, Paris</p>
-                        <div class="card-rating">
-                            <span class="badge text-white">4.4/5</span>
-                            <span class="review__text">Average</span>
-                            <span class="rating__text">(30 Reviews)</span>
-                        </div>
-                        <div class="card-price d-flex align-items-center justify-content-between">
-                            <p>
-                                <span class="price__from">From</span>
-                                <span class="price__num">$88.00</span>
-                                <span class="price__text">Per night</span>
-                            </p>
-                            <a href="hotel-single.html" class="btn-text">See details<i class="la la-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div><!-- end card-item -->
-                <div class="card-item card-item-list">
-                    <div class="card-img">
-                        <a href="hotel-single.html" class="d-block">
-                            <img src="images/img5.jpg" alt="hotel-img">
-                        </a>
-                        <div class="add-to-wishlist icon-element" data-toggle="tooltip" data-placement="top" title="Bookmark">
-                            <i class="la la-heart-o"></i>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title"><a href="hotel-single.html">Grand Desert Resort</a></h3>
-                        <p class="card-meta">Delaware, USA</p>
-                        <div class="card-rating">
-                            <span class="badge text-white">4.4/5</span>
-                            <span class="review__text">Average</span>
-                            <span class="rating__text">(30 Reviews)</span>
-                        </div>
-                        <div class="card-price d-flex align-items-center justify-content-between">
-                            <p>
-                                <span class="price__from">From</span>
-                                <span class="price__num">$88.00</span>
-                                <span class="price__text">Per night</span>
-                            </p>
-                            <a href="hotel-single.html" class="btn-text">See details<i class="la la-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div><!-- end card-item -->
+                </div><!-- end card-item -->   @endforeach
+             
+                           
+                    
             </div><!-- end col-lg-8 -->
         </div><!-- end row -->
         <div class="row">

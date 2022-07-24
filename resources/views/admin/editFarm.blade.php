@@ -1,6 +1,54 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
-   @include('layouts.Navbar')
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Farm</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../assets/css/gijgo.css">
+    <link rel="stylesheet" href="../../assets/css/slicknav.css">
+    <link rel="stylesheet" href="../../assets/css/animate.min.css">
+    <link rel="stylesheet" href="../../assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../../assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../assets/css/themify-icons.css">
+    <link rel="stylesheet" href="../../assets/css/slick.css">
+    <link rel="stylesheet" href="../../assets/css/nice-select.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../../css/line-awesome.css">
+    <link rel="stylesheet" href="../../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="../../css/daterangepicker.css">
+    <link rel="stylesheet" href="../../css/animated-headline.css">
+    <link rel="stylesheet" href="../../css/jquery-ui.css">
+    <link rel="stylesheet" href="../../css/flag-icon.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    
+
+     <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../../assets/css/line-awesome.css">
+    <link rel="stylesheet" href="../../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../assets/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="../../assets/css/daterangepicker.css">
+    <link rel="stylesheet" href="../../assets/css/animated-headline.css">
+    <link rel="stylesheet" href="../../assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="../../assets/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    
+</head>
 <!-- ================================
     START BREADCRUMB AREA
 ================================= -->
@@ -33,7 +81,7 @@
 ================================= -->
 <section class="listing-form section--padding">
     <div class="container">
-        <div class="row">@if (Auth::user())
+        <div class="row">
             <div  class="col-lg-9 mx-auto">
                 <div class="listing-header pb-4">
                     <h3 class="title font-size-28 pb-2">Add your Farm</h3>
@@ -42,21 +90,14 @@
                 </div>
                 <div class="form-box">
                     <div class="form-title-wrap">
-                    <form method='post' action="{{route('add')}}" enctype="multipart/form-data">
+                    <form method='post' action="{{route('farmsAdmin.update',$Farms->id)}}" enctype="multipart/form-data">
                       @csrf
+                      @method('PUT')
                         <h3 class="title"><i class="la la-user mr-2 text-gray"></i>Your information</h3>
                     </div><!-- form-title-wrap -->
                     <div class="form-content contact-form-action">
                         <div method="post" class="row">
-                            <div class="col-lg-6 responsive-column">
-                                <div class="input-box">
-                                    <label class="label-text">Your Name</label>
-                                    <div class="form-group">
-                                        <span class="la la-user form-icon"></span>
-                                        <input class="form-control" type="text" disabled name="text" placeholder=" {{ __(Auth::user()->name) }}">
-                                    </div>
-                                </div>
-                            </div><!-- end col-lg-6 -->
+                            
                             
          
                         </div>
@@ -684,63 +725,56 @@
 </div>
 <!-- end back-to-top -->
 
- @endif 
-  @if (Auth::guest())
-                                    <div class="alert alert-danger text-center" role="alert">
-                                   You must login to add farm                                <a href="#" class="theme-btn theme-btn-small theme-btn-transparent mr-1" data-toggle="modal" data-target="#signupPopupForm">Sign Up</a>
-                                 <a href="#" class="theme-btn theme-btn-small" data-toggle="modal" data-target="#loginPopupForm">Login</a>
 
-                                    </div>
-                                @endif
-
+ 
 <!-- Template JS Files -->
-<script src="js/jquery-3.4.1.min.js"></script>
-<script src="js/jquery-ui.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap-select.min.js"></script>
-<script src="js/moment.min.js"></script>
-<script src="js/daterangepicker.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.fancybox.min.js"></script>
-<script src="js/jquery.countTo.min.js"></script>
-<script src="js/animated-headline.js"></script>
-<script src="js/jquery.multi-file.min.js"></script>
-<script src="js/jquery.ripples-min.js"></script>
+<script src="../../js/jquery-3.4.1.min.js"></script>
+<script src="../../js/jquery-ui.js"></script>
+<script src="../../js/popper.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/bootstrap-select.min.js"></script>
+<script src="../../js/moment.min.js"></script>
+<script src="../../js/daterangepicker.js"></script>
+<script src="../../js/owl.carousel.min.js"></script>
+<script src="../../js/jquery.fancybox.min.js"></script>
+<script src="../../js/jquery.countTo.min.js"></script>
+<script src="../../js/animated-headline.js"></script>
+<script src="../../js/jquery.multi-file.min.js"></script>
+<script src="../../js/jquery.ripples-min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYzby4yYDVaXPmtu4jZAGR258K6IYwjIY&amp;libraries"></script>
-<script src="js/map-add.js"></script>
-<script src="js/main.js"></script>
+<script src="../../js/map-add.js"></script>
+<script src="../../js/main.js"></script>
 <!-- All JS Custom Plugins Link Here here -->
-        <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="../../assets/js/vendor/modernizr-3.5.0.min.js"></script>
 		
 		<!-- Jquery, Popper, Bootstrap -->
-		<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-        <script src="./assets/js/popper.min.js"></script>
-        <script src="./assets/js/bootstrap.min.js"></script>
+		<script src="../../assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="../../assets/js/popper.min.js"></script>
+        <script src="../../assets/js/bootstrap.min.js"></script>
 	    <!-- Jquery Mobile Menu -->
-        <script src="./assets/js/jquery.slicknav.min.js"></script>
+        <script src="../../assets/js/jquery.slicknav.min.js"></script>
 
 		<!-- Jquery Slick , Owl-Carousel Plugins -->
-        <script src="./assets/js/owl.carousel.min.js"></script>
-        <script src="./assets/js/slick.min.js"></script>
+        <script src="../../assets/js/owl.carousel.min.js"></script>
+        <script src="../../assets/js/slick.min.js"></script>
         <!-- Date Picker -->
-        <script src="./assets/js/gijgo.min.js"></script>
+        <script src="../../assets/js/gijgo.min.js"></script>
 		<!-- One Page, Animated-HeadLin -->
-        <script src="./assets/js/wow.min.js"></script>
-		<script src="./assets/js/animated.headline.js"></script>
-        <script src="./assets/js/jquery.magnific-popup.js"></script>
+        <script src="../../assets/js/wow.min.js"></script>
+		<script src="../../assets/js/animated.headline.js"></script>
+        <script src="../../assets/js/jquery.magnific-popup.js"></script>
 
         
         <!-- contact js -->
-        <script src="./assets/js/contact.js"></script>
-        <script src="./assets/js/jquery.form.js"></script>
-        <script src="./assets/js/jquery.validate.min.js"></script>
-        <script src="./assets/js/mail-script.js"></script>
-        <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+        <script src="../../assets/js/contact.js"></script>
+        <script src="../../assets/js/jquery.form.js"></script>
+        <script src="../../assets/js/jquery.validate.min.js"></script>
+        <script src="../../assets/js/mail-script.js"></script>
+        <script src="../../assets/js/jquery.ajaxchimp.min.js"></script>
         
 		<!-- Jquery Plugins, main Jquery -->	
-        <script src="./assets/js/plugins.js"></script>
-        <script src="./assets/js/main.js"></script>
+        <script src="../../assets/js/plugins.js"></script>
+        <script src="../../assets/js/main.js"></script>
           
 </body>
 
