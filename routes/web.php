@@ -60,6 +60,6 @@ Route::post('/add', [App\Http\Controllers\FarmController::class,'store'])->name(
 Route::get('/', [App\Http\Controllers\FarmController::class,'index']);
 Route::get('/farms', [App\Http\Controllers\FarmShowController::class,'index']);
 Route::get('farms/{id}', [App\Http\Controllers\FarmShowController::class,'show'])->name('single');
-// Route::get('/farmsAdmin', [App\Http\Controllers\Admin\FarmController::class,'index']);
-// Route::post('/farmsAdmin/{id}', [App\Http\Controllers\Admin\FarmController::class,'destroy'])->name('remove');
+Route::get('/farmsAdmin', [App\Http\Controllers\Admin\FarmController::class,'index']);
+Route::post('/farmsAdmin/{id}', [App\Http\Controllers\Admin\FarmController::class,'destroy'])->name('remove');
 Route::resource('/farmsAdmin', App\Http\Controllers\Admin\FarmController::class);
