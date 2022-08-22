@@ -13,7 +13,8 @@ class FarmController extends Controller
 
         //  $farm = Farm::select('farms.*', 'users.name')
         // ->join('users', 'users.id', '=', 'farms.user_id')->get();     
-           $farms = Farm::where($matchThese)->get();
+        // $farms = Farm::where($matchThese)->get();
+        $farms = Farm::all();
          return view('index',compact('farms'));
         
     }

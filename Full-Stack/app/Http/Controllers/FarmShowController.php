@@ -8,12 +8,12 @@ class FarmShowController extends Controller
 {
           public function index()
     {
-        $matchThese = ['active' => 'active'];
+        // $matchThese = ['active' => 'active'];
 
 
         //  $farm = Farm::select('farms.*', 'users.name')
         // ->join('users', 'users.id', '=', 'farms.user_id')->get();     
-           $farms = Farm::where($matchThese)->get();
+           $farms = Farm::where('active', 1)->get();
          return view('farm-list',compact('farms'));
         
     }
