@@ -13,8 +13,8 @@ class FarmShowController extends Controller
 
         //  $farm = Farm::select('farms.*', 'users.name')
         // ->join('users', 'users.id', '=', 'farms.user_id')->get();     
-           $farms = Farm::where('active', 1)->get();
-         return view('farm-list',compact('farms'));
+          return  $farms = Farm::All();
+        //  return view('farm-list',compact('farms'));
         
     }
 

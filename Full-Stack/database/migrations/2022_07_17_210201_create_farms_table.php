@@ -17,18 +17,22 @@ class CreateFarmsTable extends Migration
             $table->id();
             $table->string('name')->nullable();
             $table->string('location')->nullable();
-            $table->decimal('price')->nullable();
-            $table->decimal('space')->nullable();
+            $table->integer('price')->nullable();
+            $table->integer('space')->nullable();
             $table->string('images');
             $table->string('description')->nullable();
             $table->string('active');
             $table->time('time')->nullable();
+            $table->string('facebook')->nullable();
+            $table->integer('phone')->nullable();
             $table->string('day')->nullable();
             $table->integer('roomNumber')->nullable();
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')
-            ->onDelete('CASCADE')
-            ->onUpdate('CASCADE');
+                ->onDelete('CASCADE')
+                ->onUpdate('CASCADE');
+            
+            
             $table->timestamps();
         });
     }

@@ -330,7 +330,7 @@ label {
 /* button style */
 .btn {
   -moz-user-select: none;
-  background: rgb(73, 160, 51);
+  /* background: rgb(73, 160, 51); */
   border: medium none;
   border-radius: 5px;
   color: #fff;

@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FarmController;
 use App\Http\Controllers\FarmShowController;
+use App\Http\Controllers\UncosController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,9 +28,9 @@ Route::get('add', function () {
 Route::get('Contact', function () {
     return view('contact');
 });
-Route::get('News', function () {
-    return view('All-News');
-});
+// Route::get('News', function () {
+//     return view('All-News');
+// });
 Route::get('Posts', function () {
     return view('All-posts');
 });
@@ -54,12 +56,16 @@ Route::get('admin-farm', function () {
 Auth::routes();
 Route::get('/auth', [App\Http\Controllers\HomeController::class, 'index'])->name('auth');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::post('/add', [App\Http\Controllers\FarmController::class,'store'])->name('add');
-Route::get('/', [App\Http\Controllers\FarmController::class,'index']);
-Route::get('/farms', [App\Http\Controllers\FarmShowController::class,'index']);
-Route::get('farms/{id}', [App\Http\Controllers\FarmShowController::class,'show'])->name('single');
-Route::get('/farmsAdmin', [App\Http\Controllers\Admin\FarmController::class,'index']);
-Route::post('/farmsAdmin/{id}', [App\Http\Controllers\Admin\FarmController::class,'destroy'])->name('remove');
-Route::resource('/farmsAdmin', App\Http\Controllers\Admin\FarmController::class);
+// Route::post('/add', [App\Http\Controllers\FarmController::class,'store'])->name('add');
+// Route::get('/', [App\Http\Controllers\FarmController::class,'index']);
+// Route::get('/farms', [App\Http\Controllers\FarmShowController::class,'index']);
+// Route::get('farms/{id}', [App\Http\Controllers\FarmShowController::class,'show'])->name('single');
+// Route::get('/farmsAdmin', [App\Http\Controllers\Admin\FarmController::class,'index']);
+// Route::post('/farmsAdmin/{id}', [App\Http\Controllers\Admin\FarmController::class,'destroy'])->name('remove');
+// Route::resource('/farmsAdmin', App\Http\Controllers\Admin\FarmController::class);
+// Route::post('/farmsAdmin/{id}', [App\Http\Controllers\Admin\FarmController::class,'destroy'])->name('remove');
+// Route::post('/', [App\Http\Controllers\FarmController::class,'question'])->name('addQuestion');
+// Route::get('/All-News', [App\Http\Controllers\UncosController::class,'index']);
+

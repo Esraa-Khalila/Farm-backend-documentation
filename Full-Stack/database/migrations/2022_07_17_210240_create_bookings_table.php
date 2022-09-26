@@ -17,6 +17,8 @@ class CreateBookingsTable extends Migration
              $table->id();  
             $table->time('time')->nullable();
             $table->string('day')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('address')->nullable();
             $table->bigInteger('user_id')->unsigned()->nullable();
             $table->foreign('user_id')->references('id')->on('users')
             ->onDelete('CASCADE')
